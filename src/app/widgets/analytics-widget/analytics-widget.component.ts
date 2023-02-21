@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'analytics-widget',
   templateUrl: './analytics-widget.component.html',
-  styleUrls: ['./analytics-widget.component.scss'],
+  styleUrls: ['../widget.scss'],
 })
 export class AnalyticsWidgetComponent {
   @Input() text: string = '';

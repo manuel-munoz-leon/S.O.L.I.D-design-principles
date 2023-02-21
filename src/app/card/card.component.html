@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="hero">
+    <img class="card-img-top" [src]="img" alt="Card image cap" />
+    <h3 *ngIf="title" class="card-title">{{ title }}</h3>
+  </div>
+
+  <div class="card-body">
+    <div class="head">
+      <button class="mn-btn" (click)="showHideDescription()">
+        {{ isOpen ? 'Hide info' : 'Show info' }}
+      </button>
+    </div>
+    <div @slideDownUp *ngIf="isOpen" class="box">
+      <ng-container [ngSwitch]="type">
+        <video-widget
+          *ngSwitchCase="'video'"
+          [text]="text"
+          [btnText]="btnText"
+        ></video-widget>
+        <analytics-widget
+          *ngSwitchCase="'analytics'"
+          [text]="text"
+          [btnText]="btnText"
+        ></analytics-widget>
+      </ng-container>
+    </div>
+  </div>
+</div>

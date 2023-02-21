@@ -1,0 +1,71 @@
+//Card
+.card {
+  border: 1px solid #ccc;
+  border: {
+    top-left-radius: 4px;
+    top-right-radius: 4px;
+  }
+  max-width: 270px;
+  margin-bottom: 20px;
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+  img {
+    width: 40%;
+  }
+
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 20px;
+  }
+
+  &-body {
+    border-top: 1px solid #ccc;
+    background-color: aliceblue;
+    color: gray;
+    padding: 10px 10px 15px;
+    position: relative;
+  }
+
+  .mn-btn {
+    padding: 2px 6px;
+    border: 0;
+    background-color: #4888f9;
+    color: white;
+    border-bottom-left-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  h3 {
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-style: italic;
+  }
+
+  .btn {
+    border-radius: 5px;
+    background-color: #4888f9;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .box {
+    overflow: hidden;
+    padding-bottom: 5px;
+
+    img {
+      width: 100%;
+    }
+  }
+}

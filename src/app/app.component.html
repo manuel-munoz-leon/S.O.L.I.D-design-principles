@@ -20,35 +20,12 @@
 </div>
 
 <section class="mainWrapper">
-  <div class="card">
-    <div class="hero">
-      <img class="card-img-top" [src]="img" alt="Card image cap" />
-      <h3 *ngIf="title" class="card-title">{{ title }}</h3>
-    </div>
-
-    <div class="card-body">
-      <div class="head">
-        <button class="mn-btn" (click)="showHideDescription()">
-          {{ isOpen ? 'Hide info' : 'Show info' }}
-        </button>
-      </div>
-      <div @slideDownUp *ngIf="isOpen" class="box">
-        <ng-container *ngIf="!isLoading; else progressBar">
-          <img
-            width="250"
-            src="https://developers.google.com/static/analytics/images/terms/logo_lockup_analytics_icon_vertical_black_2x.png?hl=es"
-          />
-
-          <p *ngIf="text" class="card-text">{{ text }}</p>
-          <button class="btn btn-primary" (click)="reload()">
-            {{ btnText }}
-          </button>
-        </ng-container>
-
-        <ng-template #progressBar>
-          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-        </ng-template>
-      </div>
-    </div>
-  </div>
+  <app-card
+    type="analytics"
+    [isOpen]="true"
+    img="https://miro.medium.com/max/1400/0*VD2FvtlNHDmV_iLb.png"
+    title="Ng Analytics"
+    text="Site metrics of the year 2023"
+    btnText="Reload"
+  ></app-card>
 </section>

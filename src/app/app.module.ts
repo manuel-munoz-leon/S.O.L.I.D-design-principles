@@ -9,12 +9,14 @@ import { CommonModule } from '@angular/common';
 
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideoWidgetComponent,
-    AnalyticsWidgetComponent
+    AnalyticsWidgetComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

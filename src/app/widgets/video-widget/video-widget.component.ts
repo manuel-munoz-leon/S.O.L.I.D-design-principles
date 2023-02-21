@@ -3,7 +3,7 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 @Component({
   selector: 'video-widget',
   templateUrl: './video-widget.component.html',
-  styleUrls: ['./video-widget.component.scss'],
+  styleUrls: ['../widget.scss'],
 })
 export class VideoWidgetComponent {
   @Input() text: string = '';
