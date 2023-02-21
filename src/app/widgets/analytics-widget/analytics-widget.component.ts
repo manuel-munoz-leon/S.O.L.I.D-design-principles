@@ -21,6 +21,5 @@ export class AnalyticsWidgetComponent extends WidgetComponent implements Widget
 
   override reload(): void {
     super.reload();
-    this.logData();
   }
 }

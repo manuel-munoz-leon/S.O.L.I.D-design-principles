@@ -1,12 +1,19 @@
-export interface Widget {
+export interface Widget extends Logger {
   text: string;
   btnText: string;
-  logData: () => void;
-  reload: () => void;
+  
 }
 
 export interface Toggler {
   isPlay: boolean;
   videoAction: string;
   toggleVideo: () => void;
+}
+
+export interface Logger {
+  logData: () => void;
+}
+
+export interface Reloadable {
+  reload: () => void;
 }
