@@ -1,0 +1,13 @@
+<ng-container *ngIf="!isLoading; else progressBar">
+  <img
+    width="250"
+    src="https://developers.google.com/static/analytics/images/terms/logo_lockup_analytics_icon_vertical_black_2x.png?hl=es"
+  />
+
+  <p *ngIf="text" class="card-text">{{ text }}</p>
+  <button class="btn btn-primary" (click)="reload()">{{ btnText }}</button>
+</ng-container>
+
+<ng-template #progressBar>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

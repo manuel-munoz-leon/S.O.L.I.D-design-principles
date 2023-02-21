@@ -1,0 +1,13 @@
+<ng-container *ngIf="!isLoading; else progressBar">
+  <video controls height="200px" (click)="toggleVideo()" #videoPlayer>
+    <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
+    Browser not supported
+  </video>
+
+  <p *ngIf="text" class="card-text">{{ text }}</p>
+  <button class="btn btn-primary" (click)="reload()">{{ btnText }}</button>
+</ng-container>
+
+<ng-template #progressBar>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>
