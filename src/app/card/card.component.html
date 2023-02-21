@@ -11,18 +11,7 @@
       </button>
     </div>
     <div @slideDownUp *ngIf="isOpen" class="box">
-      <ng-container [ngSwitch]="type">
-        <video-widget
-          *ngSwitchCase="'video'"
-          [text]="text"
-          [btnText]="btnText"
-        ></video-widget>
-        <analytics-widget
-          *ngSwitchCase="'analytics'"
-          [text]="text"
-          [btnText]="btnText"
-        ></analytics-widget>
-      </ng-container>
+      <ng-content></ng-content>
     </div>
   </div>
 </div>
