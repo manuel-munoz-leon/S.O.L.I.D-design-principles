@@ -13,14 +13,14 @@ import { Component } from '@angular/core';
   ],
 })
 export class AppComponent {
-  darkTheme: boolean = false;
-  theme: string = 'Primary';
-  isOpen: boolean = true;
+  darkTheme = false;
+  theme = 'Primary';
+  isOpen = true;
   isLoading = false;
-  img: string = 'https://miro.medium.com/max/1400/0*VD2FvtlNHDmV_iLb.png';
-  title: string = 'Ng Analytics';
-  text: string = 'Site metrics of the year 2022';
-  btnText: string = 'Reload Data';
+  img= 'https://miro.medium.com/max/1400/0*VD2FvtlNHDmV_iLb.png';
+  title= 'Ng Analytics';
+  text = 'Site metrics of the year 2022';
+  btnText = 'Reload Data';
 
   constructor() {}
 
