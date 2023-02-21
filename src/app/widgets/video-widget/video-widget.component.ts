@@ -1,12 +1,14 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { WidgetComponent } from '../widget.component';
+import { Toggler, Widget } from '../widget.model';
 
 @Component({
   selector: 'video-widget',
   templateUrl: './video-widget.component.html',
   styleUrls: ['../widget.scss'],
 })
-export class VideoWidgetComponent extends WidgetComponent {
+export class VideoWidgetComponent extends WidgetComponent implements Widget, Toggler
+{
   @Input() text: string = '';
   @Input() btnText: string = '';
   @ViewChild('videoPlayer', { static: false }) videoplayer!: ElementRef;
@@ -14,6 +16,10 @@ export class VideoWidgetComponent extends WidgetComponent {
   videoAction = 'Play >';
   constructor() {
     super();
+  }
+
+  logData(): void {
+    console.log('Video tagging...');
   }
 
   toggleVideo(): void {
@@ -25,5 +31,6 @@ export class VideoWidgetComponent extends WidgetComponent {
       this.videoAction = 'Play >';
     }
     this.isPlay = !this.isPlay;
+    this.logData();
   }
 }

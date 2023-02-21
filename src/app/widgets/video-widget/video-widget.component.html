@@ -5,10 +5,10 @@
   </video>
 
   <p *ngIf="text" class="card-text">{{ text }}</p>
-  <button class="btn mr" (click)="toggleVideo()" color="primary">
+  <button class="btn mr" (click)="toggleVideo()">
     {{ videoAction }}
   </button>
-  <button class="btn" color="primary" (click)="reload()">{{ btnText }}</button>
+  <button class="btn" (click)="reload()">{{ btnText }}</button>
 </ng-container>
 
 <ng-template #progressBar>
