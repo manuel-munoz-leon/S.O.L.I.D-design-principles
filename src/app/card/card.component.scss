@@ -42,6 +42,15 @@
     position: absolute;
     top: 0;
     right: 0;
+    cursor: pointer;
+  }
+
+  .lt-btn {
+    @extend .mn-btn;
+    background-color:darkcyan;
+    left: 0;
+    right: auto;
+    border-bottom-right-radius: 5px;
   }
 
   h3 {
