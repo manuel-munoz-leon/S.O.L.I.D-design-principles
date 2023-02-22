@@ -1,5 +1,12 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, Input } from '@angular/core';
+import {
+  AfterContentInit,
+  Component,
+  ContentChild,
+  Input,
+} from '@angular/core';
+import { Reloadable } from '../widgets/widget.model';
+import { WIDGET } from '../widgets/widget.token';
 
 @Component({
   selector: 'app-card',
@@ -12,14 +19,23 @@ import { Component, Input } from '@angular/core';
     ]),
   ],
 })
-export class CardComponent {
+export class CardComponent implements AfterContentInit {
+  @ContentChild(WIDGET) widget!: Reloadable;
   @Input() isOpen: boolean = true;
   @Input() img: string = '';
   @Input() title: string = '';
 
   constructor() {}
 
+  ngAfterContentInit(): void {
+    console.log('widget => ', this.widget);
+  }
+
   showHideDescription(): void {
     this.isOpen = !this.isOpen;
+  }
+
+  refresh() {
+    this.widget.reload();
   }
 }
