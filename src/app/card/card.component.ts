@@ -13,7 +13,6 @@ import { Component, Input } from '@angular/core';
   ],
 })
 export class CardComponent {
-  @Input() type: string = '';
   @Input() isOpen: boolean = true;
   @Input() img: string = '';
   @Input() title: string = '';

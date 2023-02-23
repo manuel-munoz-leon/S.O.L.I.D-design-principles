@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  //black logo https://cdn.iconscout.com/icon/free/png-256/angular-2336967-1982848.png
   darkTheme: boolean = false;
   theme: string = 'Primary';
 

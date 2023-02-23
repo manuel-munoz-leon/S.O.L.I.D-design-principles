@@ -14,18 +14,26 @@
     <span>SOLID Principles</span>
   </section>
 
-  <mat-slide-toggle class="theme-switch" color="primary"
-    ></mat-slide-toggle
-  >
+  <mat-slide-toggle class="theme-switch" color="primary"></mat-slide-toggle>
 </div>
 
 <section class="mainWrapper">
   <app-card
-    type="analytics"
     [isOpen]="true"
     img="https://miro.medium.com/max/1400/0*VD2FvtlNHDmV_iLb.png"
     title="Ng Analytics"
-    text="Site metrics of the year 2023"
-    btnText="Reload"
-  ></app-card>
+  >
+    <analytics-widget
+      text="Site metrics of the year 2023"
+      btnText="Reload"
+    ></analytics-widget>
+  </app-card>
+
+  <app-card
+    [isOpen]="true"
+    img="https://cdn.iconscout.com/icon/free/png-256/angular-2336967-1982848.png"
+    title="Ng Analytics"
+  >
+    <video-widget text="Pacific Ocean" btnText="Refresh"></video-widget>
+  </app-card>
 </section>
