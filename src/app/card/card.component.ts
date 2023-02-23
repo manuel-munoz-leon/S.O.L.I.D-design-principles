@@ -5,8 +5,7 @@ import {
   ContentChild,
   Input,
 } from '@angular/core';
-import { Reloadable } from '../widgets/widget.model';
-import { WIDGET } from '../widgets/widget.token';
+import { AnalyticsWidgetComponent } from '../widgets/analytics-widget/analytics-widget.component';
 
 @Component({
   selector: 'app-card',
@@ -20,7 +19,7 @@ import { WIDGET } from '../widgets/widget.token';
   ],
 })
 export class CardComponent implements AfterContentInit {
-  @ContentChild(WIDGET) widget!: Reloadable;
+  @ContentChild(AnalyticsWidgetComponent) widget!: AnalyticsWidgetComponent;
   @Input() isOpen: boolean = true;
   @Input() img: string = '';
   @Input() title: string = '';
