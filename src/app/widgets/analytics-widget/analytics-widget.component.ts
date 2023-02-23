@@ -1,20 +1,17 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { WidgetComponent } from '../widget.component';
 @Component({
   selector: 'analytics-widget',
   templateUrl: './analytics-widget.component.html',
   styleUrls: ['../widget.scss'],
 })
-export class AnalyticsWidgetComponent {
-  @Input() text: string = '';
-  @Input() btnText: string = '';
-  isLoading = false;
+export class AnalyticsWidgetComponent extends WidgetComponent {
+  constructor() {
+    super();
+  }
 
-  constructor() {}
-
-  reload(): void {
-    this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 2000);
+  override reload(): void {
+    super.reload(false);
+    console.warn('Feature not supported!');
   }
 }

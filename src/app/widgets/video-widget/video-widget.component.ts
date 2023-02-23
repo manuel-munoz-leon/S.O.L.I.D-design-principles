@@ -1,27 +1,19 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { WidgetComponent } from '../widget.component';
 
 @Component({
   selector: 'video-widget',
   templateUrl: './video-widget.component.html',
   styleUrls: ['../widget.scss'],
 })
-export class VideoWidgetComponent {
-  @Input() text: string = '';
-  @Input() btnText: string = '';
-  isLoading = false;
-
+export class VideoWidgetComponent extends WidgetComponent {
   @ViewChild('videoPlayer', { static: false }) videoplayer!: ElementRef;
   isPlay: boolean = false;
-  constructor() {}
+  constructor() {
+    super();
+  }
 
   toggleVideo() {
     this.videoplayer.nativeElement.play();
-  }
-
-  reload(): void {
-    this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 2000);
   }
 }
